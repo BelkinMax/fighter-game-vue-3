@@ -1,11 +1,18 @@
 module.exports = {
-  env: {
-    node: true,
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:vue/vue3-recommended',
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "eslint:recommended",
+    "@vue/typescript/recommended"
   ],
+  "parserOptions": {
+    "ecmaVersion": 2021
+  },
   rules: {
     indent: ['error', 2],
     'vue/html-indent': ['error', 2, {
@@ -15,7 +22,7 @@ module.exports = {
       alignAttributesVertically: true,
       ignores: []
     }],
-    "space-in-brackets": ["error", "always"]
+    "object-curly-spacing": ["error", "always"]
     // override/add rules settings here, such as:
     // 'vue/no-unused-vars': 'error'
   }
